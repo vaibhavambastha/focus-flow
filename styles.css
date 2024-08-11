@@ -1,0 +1,15 @@
+/* YouTube */
+#related, 
+#secondary, 
+#primary,
+#comments, 
+ytd-watch-next-secondary-results-renderer, 
+ytd-shelf-renderer {
+  display: none !important;
+}
+
+/* Instagram */
+section > div > div > div > div > div, /* Main Reels feed */
+div > div > div > div > div > div > div > div > div > div > div > div > div /* Reels video containers */ {
+  display: none !important;
+}
