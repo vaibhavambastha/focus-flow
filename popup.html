@@ -1,36 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Extension Popup</title>
   <style>
-    /* Add your CSS styles here */
-    body {
-      width: 300px; /* Width of the popup */
-      height: 150px; /* Adjusted height of the popup */
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 10px;
-      box-sizing: border-box;
-    }
-    h1 {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-    #status {
-      margin-top: 10px;
-    }
+    /* Basic styling for the toggle switch */
     .switch {
       position: relative;
       display: inline-block;
-      width: 60px;
-      height: 34px;
+      width: 34px;
+      height: 20px;
     }
-    .switch input {
+
+    .switch input { 
       opacity: 0;
       width: 0;
       height: 0;
     }
+
     .slider {
       position: absolute;
       cursor: pointer;
@@ -40,34 +25,36 @@
       bottom: 0;
       background-color: #ccc;
       transition: .4s;
-      border-radius: 34px;
+      border-radius: 20px;
     }
+
     .slider:before {
       position: absolute;
       content: "";
-      height: 26px;
-      width: 26px;
+      height: 12px;
+      width: 12px;
       border-radius: 50%;
       left: 4px;
       bottom: 4px;
       background-color: white;
       transition: .4s;
     }
+
     input:checked + .slider {
       background-color: #2196F3;
     }
+
     input:checked + .slider:before {
-      transform: translateX(26px);
+      transform: translateX(14px);
     }
   </style>
 </head>
 <body>
-  <h1>Extension Control</h1>
+  <h1>Focus Flow</h1>
   <label class="switch">
-    <input type="checkbox" id="toggle" aria-label="Toggle extension on/off">
+    <input type="checkbox" id="toggle">
     <span class="slider"></span>
   </label>
-  <div id="status">Status: Unknown</div>
   <script src="popup.js"></script>
 </body>
 </html>
