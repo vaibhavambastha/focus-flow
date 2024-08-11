@@ -14,10 +14,10 @@ function hideYouTubeRecommendations() {
     });
   }
   
-  function hideInstagramReels() {
+  function hideInstagramFeed() {
     const instagramSelectors = [
-      "section > div > div > div > div > div", // Main Reels feed on the homepage
-      "div > div > div > div > div > div > div > div > div > div > div > div > div" // Reels video containers
+      "main > div > div > div > div > div > div > div > div > div > div > div > div > div", // Main feed section
+      "article > div > div > div > div > div > div > div > div > div > div" // Individual post containers
     ];
   
     instagramSelectors.forEach(selector => {
@@ -32,7 +32,7 @@ function hideYouTubeRecommendations() {
     if (url.includes("youtube.com")) {
       hideYouTubeRecommendations();
     } else if (url.includes("instagram.com")) {
-      hideInstagramReels();
+      hideInstagramFeed();
     }
   }
   
