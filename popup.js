@@ -1,16 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const toggle = document.getElementById('toggle');
+    const statusElement = document.getElementById('status');
   
     // Load the current state
     chrome.storage.sync.get('enabled', function(data) {
-      toggle.checked = data.enabled !== false; // Default to true if 'enabled' is not set
-    });
-  
-    // Listen for changes to the toggle
-    toggle.addEventListener('change', function() {
-      chrome.storage.sync.set({ 'enabled': toggle.checked }, function() {
-        console.log('Toggle state saved:', toggle.checked);
-      });
+      if (data.enabled === false) {
+        statusElement.textContent = 'Extension is Disabled';
+      } else {
+        statusElement.textContent = 'Extension is Enabled';
+      }
     });
   });
   

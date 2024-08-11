@@ -1,14 +1,14 @@
 function updateExtensionState() {
     chrome.storage.sync.get('enabled', function(data) {
       if (data.enabled === false) {
-        chrome.action.disable(); // Disable the extension if 'enabled' is false
+        chrome.action.disable();
       } else {
-        chrome.action.enable(); // Enable the extension if 'enabled' is true
+        chrome.action.enable();
       }
     });
   }
   
-  // Initial check when the extension is installed
+  // Initialize state when the extension is installed
   chrome.runtime.onInstalled.addListener(updateExtensionState);
   
   // Update state on storage change
