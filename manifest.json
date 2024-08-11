@@ -3,7 +3,7 @@
     "name": "Focus Flow",
     "version": "1.0",
     "description": "Hides YouTube videos and Instagram reels recommendations .",
-    "permissions": ["activeTab", "declarativeContent", "scripting"],
+    "permissions": ["activeTab", "declarativeContent", "scripting", "storage"],
     "background": {
       "service_worker": "background.js"
     },
