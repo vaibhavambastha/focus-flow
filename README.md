@@ -1,2 +1,3 @@
 # focus-flow
-Welcome to the Focus Flow, clear your distractions from YouTube video recommendations and Instagram reels
+Focus Flow is a productivity-enhancing Chrome extension to help stay focused by hiding distracting recommendations on YouTube and Instagram.
+Using a combination of HTML and CSS for user interface and JavaScript for the functionality of the extension, these web technologies made it convenient to make this tool for reducing distraction. Scripting and activeTab permissions are also used to modify the web content in real-time. Currently waiting on review for Focus Flow to be deployed to the Chrome extension web store. For the meanwhile, head to [Chrome Extensions](chrome://extensions/) (make sure on Developer mode)and select "Load unpack" and upload the zip file.
